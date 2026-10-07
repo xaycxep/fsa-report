@@ -1,0 +1,33 @@
+fgis:
+  base_url: "https://fgis.gost.ru/fundmetrology/eapi/vri"
+  concurrency: 3       # одновременных запросов
+  min_interval: 0.5
+  timeout: 20.0         # секунд на запрос
+  retry_on_429: true
+  retry_delay: 2.0
+  max_retries: 5
+
+# --- Excel ---
+excel:
+  cert_col_index: 10    
+  name_col_index: 11    
+  header_row: 3         
+
+# --- Выход ---
+output:
+  xml_file: "reporting_verification_MI.xml"
+
+# --- Справочник сотрудников ---
+snils_data:
+  ФАМИЛИЯ:
+    last:  "Фамилия"
+    first: "Имя"
+    snils: "СНИЛС"
+    
+logging:
+    level: "INFO"
+    directory: "logs"
+    file: "vri.log"
+    max_bytes: 1048576
+    backup_count: 5
+    console: false
