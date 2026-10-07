@@ -1,0 +1,30 @@
+fgis:
+  base_url: "https://example.test/api"
+  concurrency: 2
+  min_interval: 0.0          # в тестах не тормозим
+  timeout: 5.0
+  retry_on_429: false
+  retry_delay: 0.01
+  max_retries: 1
+
+excel:
+  cert_col_index: 0
+  name_col_index: 1
+  header_row: 0
+
+output:
+  xml_file: "tests/test_report.xml"
+
+logging:
+  level: "WARNING"           # в тестах лог не спамит
+  directory: "tests/logs"
+  file: "test.log"
+  max_bytes: 1048576
+  backup_count: 1
+  console: false
+
+snils_data:
+  ФАМИЛИЯ:
+    last:  "Фамилия"
+    first: "Имя"
+    snils: "00000000000"
